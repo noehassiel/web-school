@@ -69,7 +69,9 @@
         @include('back.layouts.navbar')
         
         <div class="main-container">
-            @yield('content')
+            <div class="content-wrapper">
+                @yield('content')
+            </div>
         </div>
         <div class="overlay-app"></div>
         </div>

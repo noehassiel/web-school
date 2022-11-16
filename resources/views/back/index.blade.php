@@ -3,8 +3,7 @@
 @section('content')
 
 {{-- @include('back.layouts.title') --}}
-   <div class="content-wrapper">
-    {{-- 
+     
     <div class="content-wrapper-header">
      <div class="content-wrapper-context">
       <h3 class="img-content">
@@ -181,10 +180,9 @@
       </div>
      </div>
     </div>
-     --}}
 
      <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <div class="app-card">
                 <span>
                     <svg viewBox="0 0 52 52" style="border: 1px solid #C75DEB">
@@ -204,7 +202,6 @@
         </div>
      </div>
 
-   </div>
 
 
 @endsection
