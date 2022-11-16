@@ -13,13 +13,11 @@
 @section('content')
 
 @if($banners->count() == 0)
-<div class="row justify-content-center align-items-center">
-    <div class="text-center">
-        <img src="{{ asset('assets/img/group_7.svg') }}" style="height: 20px" class="wd-20p ml-auto mr-auto mb-5">
-        <h4>¡No hay banners guardadas en la base de datos!</h4>
-        <p class="mb-4">Empieza a cargar banners en tu plataforma usando el botón superior.</p>
-        <a href="{{ route('banners.create') }}" class="btn btn-sm btn-primary btn-uppercase ml-auto mr-auto">Crear nuevo banner</a>
-    </div>        
+<div class="card-body text-center" style="padding:80px 0px 100px 0px;">
+    <img src="{{ asset('assets/img/group_7.svg') }}" height="100px" class="wd-20p ml-auto mr-auto mb-5">
+    <h4>¡No hay banners guardadas en la base de datos!</h4>
+    <p class="mb-4">Empieza a cargar banners en tu plataforma usando el botón superior.</p>
+    <a href="{{ route('banners.create') }}" class="btn btn-sm btn-primary btn-uppercase ml-auto mr-auto">Crear nuevo banner</a>
 </div>
 @else
 
