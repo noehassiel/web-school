@@ -459,7 +459,7 @@ body.light-mode .video-bg:before {
     display: flex;
     flex-direction: column;
     color: var(--theme-color);
-    padding: 30px;
+    padding: 30px 20px;
     height: 100%;
     overflow: auto;
     background-color: var(--theme-bg-color);
@@ -883,7 +883,6 @@ body.light-mode .video-bg:before {
 .app-card {
     display: flex;
     flex-direction: column;
-    width: calc(33.3% - 20px);
     font-size: 16px;
     background-color: var(--content-bg);
     border-radius: 14px;
