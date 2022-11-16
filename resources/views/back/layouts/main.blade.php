@@ -85,8 +85,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
     <!-- choose one -->
     <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script> 
     <script>
         feather.replace()
     </script>
@@ -163,9 +162,18 @@
         const toggleButton = document.querySelector('.dark-light');
 
         toggleButton.addEventListener('click', () => {
-        document.body.classList.toggle('light-mode');
+            document.body.classList.toggle('light-mode');
         });
+
     </script>
     @stack('scripts')
+
+    <script src="{{ asset('assets/js/sct.min.js') }}"></script>
+
+    <script>
+        const toolbarColor = new SBToolbar({
+            color: "blue"
+        });
+    </script>
 </body>
 </html>
