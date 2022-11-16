@@ -1,0 +1,50 @@
+/*----------------------------
+
+    # M E S T (variables)
+
+----------------------------*/
+
+
+//COLORS
+$color-orange: #FE5300;
+$color-yellow: #F38100;
+$color-blue: #324785;
+$color-white: #FFFFFF;
+$color-black: #242A31;
+$color-gray: #F7F7F7;
+
+//COLORS WITH OPACITY
+$color-orange-opacity: rgba(254, 83, 0, 0.75);
+$color-yellow-opacity: rgba(243, 129, 0, 0.75);
+$color-black-opacity: rgba(36, 42, 49, 0.75);
+$color-gray-opacity: rgba(247, 247, 247, 0);
+
+//FONTS
+@font-face {
+    font-family: "Overpass-Light";
+    src: url("../fonts/light/Overpass-Light.woff"),
+        url("../fonts/light/Overpass-Light.ttf"),
+        url("../fonts/light/Overpass-Light.woff2");
+}
+
+@font-face {
+    font-family: "Overpass-Bold";
+    src: url("../fonts/bold/Overpass-Bold.woff"),
+        url("../fonts/bold/Overpass-Bold.ttf"),
+        url("../fonts/bold/Overpass-Bold.woff2");
+}
+
+@font-face {
+    font-family: "Overpass-ExtraBold";
+    src: url("../fonts/extra/Overpass-ExtraBold.woff"),
+        url("../fonts/extra/Overpass-ExtraBold.ttf"),
+        url("../fonts/extra/Overpass-ExtraBold.woff2");
+}
+
+
+//RESPONSIVE
+@mixin mobile {
+    @media only screen and (max-width: 768px) {
+        @content;
+    }
+}

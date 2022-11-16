@@ -1,0 +1,720 @@
+/*----------------------------
+
+    # M E S T (styles)
+
+----------------------------*/
+
+//FILES
+@import "variables";
+
+//GLOBAL
+body {
+  font-family: "Overpass-Light" !important;
+  font-size: 0.9rem;
+  font-weight: lighter;
+  color: $color-black;
+}
+
+.container {
+  max-width: 85% !important;
+
+  @include mobile {
+    max-width: 95% !important;
+  }
+}
+
+.padding-top {
+  padding-top: 8.5rem;
+
+  @include mobile {
+    padding-top: 0rem !important;
+  }
+}
+
+.padding-bottom {
+  padding-bottom: 8.5rem;
+
+  @include mobile {
+    padding-bottom: 0rem !important;
+  }
+}
+
+//HEADER
+header {
+  color: $color-white;
+  z-index: 100;
+
+  transition: 0.2s;
+
+  .row {
+    transition: 0.2s;
+  }
+
+  .btn {
+    color: $color-white;
+  }
+
+  .logo {
+    height: 100px;
+    width: 160px;
+    margin-left: -10px;
+    background: url(../img/logo-white.svg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .header--form {
+    border-bottom: 1px solid $color-white;
+
+    input {
+      background: transparent !important;
+      border: none;
+      color: $color-white;
+      width: 210px;
+      font-size: 0.95rem;
+
+      &:focus {
+        outline: none;
+      }
+
+      &::-webkit-input-placeholder {
+        // WebKit browsers
+        padding-bottom: 50px;
+      }
+    }
+
+    button {
+      background: transparent;
+      border: none;
+      color: $color-white;
+      font-size: 1.2rem;
+      position: relative;
+
+      ion-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-65%, -75%);
+      }
+    }
+  }
+
+  //RESPOSIVE
+  #desktop--header {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  #mobile--header {
+    display: none;
+
+    @include mobile {
+      display: block;
+
+      .logo {
+        height: 40px;
+        width: 95px;
+        margin-left: 0px;
+        background: url(../img/logo-white.svg);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      .btn {
+        border-radius: 0px;
+      }
+    }
+  }
+
+  //SCROLL
+  #mobile--header {
+    .btn:nth-child(2) {
+      background-color: $color-black;
+    }
+  }
+}
+
+//SCROLL
+header.scroll {
+  background-color: $color-white;
+  -webkit-box-shadow: 0px 6px 17px -7px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 6px 17px -7px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 6px 17px -7px rgba(0, 0, 0, 0.3);
+
+  .row {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+
+  .logo {
+    height: 100px;
+    width: 160px;
+    margin-left: -10px;
+    background: url(../img/logo-black.svg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .header--form {
+    border-bottom: 1px solid $color-black;
+
+    input {
+      color: $color-black;
+    }
+
+    button {
+      color: $color-black;
+    }
+  }
+
+  .btn:nth-child(1) {
+    color: $color-black;
+  }
+
+  #mobile--header {
+    .logo {
+      height: 40px;
+      width: 95px;
+      margin-left: 0px;
+      background: url(../img/logo-black.svg);
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+//HEADER ALTERNATIVE
+header.alternative {
+  .logo {
+    height: 100px;
+    width: 160px;
+    margin-left: -10px;
+    background: url(../img/logo-black.svg);
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .header--form {
+    border-bottom: 1px solid $color-black;
+
+    input {
+      color: $color-black;
+    }
+
+    button {
+      color: $color-black;
+    }
+  }
+
+  .btn:nth-child(1) {
+    color: $color-black;
+  }
+}
+
+//MENU
+.home--menu {
+  a {
+    text-decoration: none;
+    color: $color-white;
+  }
+
+  //RESPONSIVE
+  @include mobile {
+    display: none;
+  }
+
+  .home--menu-wrap--icon {
+    ion-icon {
+      font-size: 1.4rem;
+      margin-right: 1rem;
+      /*Hover*/
+      color: transparent;
+      margin-left: -40px;
+
+      transition-timing-function: cubic-bezier(0.5, 0.62, 0.66, 0.74);
+      transition: 0.2s;
+    }
+  }
+
+  li {
+    &:hover .home--menu-wrap--icon ion-icon {
+      color: $color-white;
+      margin-left: 0px;
+    }
+  }
+}
+
+//HOME
+.home--section {
+  background-image: linear-gradient(
+      rgba(36, 42, 49, 0.9),
+      rgba(36, 42, 49, 0.9)
+    ),
+    url(../img/home-background.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 95vh;
+
+  //RESPONSIVE
+  @include mobile {
+    height: 75vh;
+  }
+
+  .home--banner {
+    position: absolute;
+    bottom: -20%;
+    right: 0%;
+    width: 80%;
+    min-height: 35px;
+
+    //RESPONSIVE
+    @include mobile {
+      display: none;
+    }
+
+    .home--banner-info {
+      width: 65%;
+      padding: 3.5rem;
+      position: relative;
+    }
+
+    .home--banner--figure {
+      width: 35%;
+      position: relative;
+
+      .home--banner--figure--wrap {
+        position: absolute;
+        top: -75%;
+        left: -50%;
+        width: 450px;
+        height: 450px;
+      }
+    }
+  }
+
+  //RESPONSIVE
+  .row {
+    @include mobile {
+      justify-content: start !important;
+      align-items: start !important;
+    }
+  }
+
+  .home--banner--mobile {
+    display: none;
+
+    @include mobile {
+      display: block;
+      position: absolute;
+      width: 55%;
+      height: 250px;
+      bottom: 10%;
+      right: 0%;
+
+      .home--banner--figure--wrap {
+        position: absolute;
+        top: -30%;
+        left: -35%;
+        width: 250px;
+        height: 250px;
+      }
+    }
+  }
+
+  .btn {
+    display: none;
+
+    @include mobile {
+      display: block;
+      width: 50% !important;
+    }
+  }
+
+  .col-md-10 {
+    @include mobile {
+      margin-top: -80px;
+      z-index: 1;
+    }
+  }
+}
+
+.mobile--home {
+  display: none;
+
+  @include mobile {
+    display: block;
+  }
+}
+
+//RESULT
+.result--section {
+  //RESPONSIVE
+  .result--info {
+    @include mobile {
+      div:nth-child(2) {
+        order: 3;
+      }
+
+      div:nth-child(3) {
+        background-color: $color-gray;
+      }
+
+      button {
+        visibility: hidden;
+      }
+
+      div:nth-child(3) {
+        padding-right: 0px !important;
+        text-align: center !important;
+        margin-bottom: 4rem;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+
+        h1 {
+          font-size: 1rem;
+          visibility: hidden;
+        }
+
+        h1:after {
+          font-size: 4.5rem;
+          visibility: visible;
+          content: "$40 M";
+          display: block;
+        }
+
+        h6 {
+          padding-right: 0px !important;
+        }
+      }
+
+      .btn {
+        display: none;
+      }
+    }
+  }
+
+  .result--btn {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    margin-top: -50px;
+    margin-right: 90px;
+  }
+
+  .bg--alternative {
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+//TECHNOLOGY
+.techno--section {
+  //RESPONSIVE
+  @include mobile {
+    .btn {
+      width: 100% !important;
+      padding: 25px 30px 25px 30px;
+    }
+  }
+}
+
+//HOW
+.how--section {
+  .how {
+    .how--image {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+    }
+  }
+
+  //RESPONSIVE
+  @include mobile {
+    display: none;
+  }
+}
+
+//CONTACT
+.contact--section {
+  //RESPONSIVE
+  @include mobile {
+    margin-top: 3.5rem;
+
+    .d-flex {
+      display: block !important;
+      text-align: center !important;
+
+      .text-left {
+        text-align: center !important;
+        margin-right: 0px !important;
+        padding: 3rem;
+
+        h2 {
+          font-size: 2.5rem !important;
+        }
+      }
+
+      .text-center {
+        margin-left: 0px !important;
+      }
+    }
+  }
+}
+
+//SECTORS
+.sector--section {
+  .collage {
+    .collage--image {
+      position: relative;
+      width: 100%;
+      height: 300px;
+
+      //RESPOSNIVE
+      @include mobile {
+        height: 350px;
+      }
+
+      &:hover .collage--info {
+        background: linear-gradient(
+          $color-orange-opacity,
+          $color-yellow-opacity
+        );
+        top: 0%;
+        height: 100%;
+
+        p {
+          visibility: visible;
+          line-height: 1.8;
+        }
+      }
+    }
+
+    .collage--info {
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      width: 100%;
+      height: 50%;
+
+      transition-timing-function: cubic-bezier(0.5, 0.62, 0.66, 0.74);
+      transition: all 0.3s;
+
+      background: linear-gradient($color-gray-opacity, $color-black-opacity);
+
+      .collage--info--text {
+        position: absolute;
+        bottom: 0%;
+        color: $color-white;
+      }
+
+      p {
+        visibility: hidden;
+        line-height: 0;
+      }
+    }
+  }
+}
+
+//ICON
+.info--icon {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: -15%;
+  left: -6%;
+
+  ion-icon {
+    color: $color-white;
+    font-size: 1.2rem;
+  }
+}
+
+//LEGAL
+.legal {
+  a {
+    color: $color-black;
+  }
+
+  .image--legal {
+    width: 300px !important;
+
+    @include mobile {
+      width: 230px !important;
+    }
+  }
+}
+
+//Pruebas
+.services--home {
+  height: 95vh;
+  width: 100%;
+
+  @include mobile {
+    height: 86vh;
+  }
+
+  .services--title#industrial {
+    background-image: linear-gradient(
+        rgba(36, 42, 49, 0.5),
+        rgba(36, 42, 49, 0.5)
+      ),
+      url(../img/ind-1.jpg);
+  }
+
+  .services--title#agricultural {
+    background-image: linear-gradient(
+        rgba(36, 42, 49, 0.5),
+        rgba(36, 42, 49, 0.5)
+      ),
+      url(../img/agro-1.jpg);
+  }
+
+  .services--title#solar {
+    background-image: linear-gradient(
+        rgba(36, 42, 49, 0.5),
+        rgba(36, 42, 49, 0.5)
+      ),
+      url(../img/gen-1.jpg);
+  }
+
+  .services--title#public {
+    background-image: linear-gradient(
+        rgba(36, 42, 49, 0.5),
+        rgba(36, 42, 49, 0.5)
+      ),
+      url(../img/alum-1.jpg);
+  }
+
+  .services--title {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    position: absolute;
+    top: 25%;
+    right: 0%;
+    width: 80%;
+    height: 65%;
+
+    @include mobile {
+      top: 5%;
+      width: 90%;
+    }
+  }
+
+  .home--menu {
+    a {
+      color: $color-black !important;
+    }
+
+    h6 {
+      color: $color-black !important;
+    }
+
+    .home--menu-wrap--icon {
+      ion-icon {
+        font-size: 1.4rem;
+        margin-right: 1rem;
+        /*Hover*/
+        color: transparent;
+        margin-left: -40px;
+
+        transition-timing-function: cubic-bezier(0.5, 0.62, 0.66, 0.74);
+        transition: 0.2s;
+      }
+    }
+
+    li {
+      &:hover .home--menu-wrap--icon ion-icon {
+        color: $color-black;
+        margin-left: 0px;
+      }
+    }
+  }
+}
+
+//ABOUT
+.about--home {
+  height: 100vh;
+  width: 100%;
+
+  @include mobile {
+    .col-md-10 {
+      justify-content: center !important;
+      align-items: center !important;
+    }
+  }
+
+  .home--menu {
+    a {
+      color: $color-black !important;
+    }
+
+    h6 {
+      color: $color-black !important;
+    }
+
+    li {
+      &:hover .home--menu-wrap--icon ion-icon {
+        color: $color-black;
+        margin-left: 0px;
+      }
+    }
+  }
+}
+
+.about--banner {
+  background: url(../img/about-banner.svg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+//CARDS
+.card--info {
+  .card--text {
+    border-top-left-radius: 1.2rem !important;
+    border-bottom-left-radius: 1.2rem !important;
+  }
+
+  .card--image {
+    img {
+      border-top-right-radius: 1.2rem !important;
+      border-bottom-right-radius: 1.2rem !important;
+    }
+  }
+
+  //RESPONSIVE
+  @include mobile {
+    .card--text {
+      border-radius: 0px !important;
+      border-top-left-radius: 1.2rem !important;
+      border-top-right-radius: 1.2rem !important;
+    }
+
+    .card--image {
+      img {
+        border-radius: 0px !important;
+        border-bottom-left-radius: 1.2rem !important;
+        border-bottom-right-radius: 1.2rem !important;
+      }
+    }
+  }
+}
+
+.card--info.pl-5 {
+  padding-left: 1rem !important;
+}

@@ -1,0 +1,318 @@
+/*----------------------------
+
+    # M E S T (base)
+
+----------------------------*/
+
+
+//FILES
+@import "variables";
+
+
+//BACKGROUND
+.bg--gradient {
+    background: linear-gradient($color-yellow, $color-orange);
+    color: $color-white;
+}
+
+.bg--orange {
+    background-color: $color-orange;
+    color: $color-white;
+}
+
+.bg--yellow {
+    background-color: $color-yellow;
+    color: $color-white;
+}
+
+.bg--blue {
+    background-color: $color-blue;
+    color: $color-white;
+}
+
+.bg--white {
+    background-color: $color-white;
+    color: $color-black;
+}
+
+.bg--black {
+    background-color: $color-black;
+    color: $color-white;
+}
+
+.bg--gray {
+    background-color: $color-gray;
+    color: $color-black;
+}
+
+.bg--transparent {
+    background: transparent !important;
+    color: $color-black;
+}
+
+.bg--alternative {
+    position: absolute;
+    width: calc(100% + 40%);
+    left: calc(0% - 40%);
+    top: 0%;
+    z-index: -1;
+    height: 100%;
+}
+
+//BACKGROUDN WITH OPACITY
+.bg--orange--opacity {
+    background: linear-gradient($color-orange-opacity, $color-yellow-opacity);
+}
+
+
+//TEXT COLOR
+.text--orange {
+    color: $color-orange;
+}
+
+.text--yellow {
+    color: $color-yellow;
+}
+
+.text--blue {
+    color: $color-blue;
+}
+
+.text--white {
+    color: $color-white !important;
+}
+
+.text--black{
+    color: $color-black;
+}
+
+
+//TEXT SIZE 
+h1 {
+    font-size: 3.2rem;
+
+    //RESPONSIVE
+    @include mobile {
+        font-size: 2.4rem;
+    }
+}
+
+h2 {
+    font-size: 1.8rem;
+
+    //RESPONSIVE
+    @include mobile {
+        font-size: 1.75rem;
+    }
+} 
+
+h3 {
+    font-size: 1.6rem;
+} 
+
+h4 {
+    font-size: 1.4rem;
+} 
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 0.90rem;
+} 
+
+h6.w-50 {
+    @include mobile {
+        width: 35% !important;
+    }
+} 
+
+p {
+    font-size: 0.90rem;
+}
+
+.text--big {
+    font-size: 7rem;
+}
+
+.line-height {
+    line-height: 2;
+}
+
+
+//BOOTSTRAP
+.btn.text-uppercase, h6.text-uppercase {
+    font-family: "Overpass-Light";
+    font-size: 0.8rem;
+    font-weight: lighter !important;
+}
+
+.font-weight-bold {
+    font-family: "Overpass-Bold" !important;
+}
+
+.font-weight-extra-bold {
+    font-family: "Overpass-ExtraBold" !important;
+    line-height: 1;
+}
+
+
+//IMAGES
+img {
+    border: 0px !important;
+}
+
+.image--cover, .image--contain, .image--fill {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+}
+
+.image--cover {
+    object-fit: cover;
+}
+
+.image--contain {
+    object-fit: contain;
+}
+
+.image--fill {
+    object-fit: fill;
+}
+
+
+//BUTTONS
+.btn {
+    font-size: 0.805rem !important;
+    position: relative;
+    border: 0px !important;
+
+    ion-icon{
+        font-size: 1.2rem;
+        margin-bottom: -4px;
+        margin-right: 5px;
+    }
+}
+
+.btn.text-uppercase {
+    font-size: 0.7rem !important;
+    position: relative;
+}
+
+.btn.border {
+    border: 1px solid !important;
+}
+
+
+//PADDING
+.pd--1 {
+    padding: 15px 30px 13px 30px;
+}
+
+.pd--2 {
+    padding: 13px 40px 13px 40px;
+}
+
+
+//ROUNDED ONE 
+.rd--1 {
+    border-radius: 1.2rem !important;
+}
+
+.rd--1--top-left {
+    border-top-left-radius: 1.2rem !important;
+}
+
+.rd--1--top-right {
+    border-top-right-radius: 1.4rem !important;
+}
+
+.rd--1--bottom-left {
+    border-bottom-left-radius: 1.2rem !important;
+}
+
+.rd--1--bottom-right  {
+    border-bottom-right-radius: 1.2rem !important;
+}
+
+
+//ROUNDED TWO
+.rd--2 {
+    border-radius: 3rem !important;
+}
+
+.rd--2--top-left {
+    border-top-left-radius: 3rem !important;
+}
+
+.rd--2--top-right {
+    border-top-right-radius: 3rem !important;
+}
+
+.rd--2--bottom-left {
+    border-bottom-left-radius: 3rem !important;
+}
+
+.rd--2--bottom-right  {
+    border-bottom-right-radius: 3rem !important;
+}
+
+
+//BORDER
+.border {
+    border: 2.5px solid !important;
+}
+
+.border-top {
+    border-top: 2.5px solid !important;
+}
+
+.border-right {
+    border-right: 2.5px solid !important;
+}
+
+.border-bottom {
+    border-bottom: 2.5px solid !important;
+}
+
+.border-left {
+    border-bottom: 2.5px solid !important;
+}
+
+
+//SHADOW
+.shadow-- {
+    -webkit-box-shadow: 0px 6px 17px -7px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 6px 17px -7px rgba(0,0,0,0.3);
+    box-shadow: 0px 6px 17px -7px rgba(0,0,0,0.3);
+}
+
+
+//HOVER 
+.hover--bg--white:hover {
+    background-color: $color-white !important;
+    transition: 0.2s;
+}
+
+
+//SIZE
+.w-75, .w-50 {
+    //RESPONSIVE
+    @include mobile {
+        width: 100% !important;
+    }
+}
+
+.pr-5 {
+    //RESPONISVE
+    @include mobile {
+        padding-right: 1.3rem !important;
+    }
+}
+
+
+//examples production
+.vh-100{
+    height: 100vh !important;
+}

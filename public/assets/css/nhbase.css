@@ -1,0 +1,12 @@
+:root{
+    --primary: rgb(240, 115, 121);
+}
+
+.nav-link .icon .feather{
+    width: 18px;
+    height: 18px;
+}
+
+.navbar-vertical .navbar-nav>.nav-item .nav-link.active .feather{
+    color: var(--primary);
+}

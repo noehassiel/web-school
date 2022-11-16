@@ -1,0 +1,300 @@
+/*----------------------------
+
+    # M E S T (base)
+
+----------------------------*/
+/*----------------------------
+
+    # M E S T (variables)
+
+----------------------------*/
+@font-face {
+  font-family: "Overpass-Light";
+  src: url(/fonts/Overpass-Light.woff?04b8208ec52016a6008936370eec1383), url(/fonts/Overpass-Light.ttf?b4e5c4b9f152916a9d6f6af843738d2b), url(/fonts/Overpass-Light.woff2?22b9a25d3bf9a5d9e31cdbe9773a34d8);
+}
+@font-face {
+  font-family: "Overpass-Bold";
+  src: url(/fonts/Overpass-Bold.woff?8a142c29a318c432117a3747b986bbb9), url(/fonts/Overpass-Bold.ttf?1fa1c16a4a45d13f0df8ba2341f48a77), url(/fonts/Overpass-Bold.woff2?cadb6b94d6b0ecc3a86a8d30492530c1);
+}
+@font-face {
+  font-family: "Overpass-ExtraBold";
+  src: url(/fonts/Overpass-ExtraBold.woff?155b4fc1a45034ded2d3f0c5f5ceb637), url(/fonts/Overpass-ExtraBold.ttf?d313683a28fb93633dbd0a1aabe39b16), url(/fonts/Overpass-ExtraBold.woff2?99cbcc4af77bd6aef6db052672fb34cc);
+}
+.bg--gradient {
+  background: linear-gradient(#B9D89A, #8FB480);
+  color: #FFFFFF;
+}
+
+.bg--orange {
+  background-color: #B9D89A;
+  color: #FFFFFF;
+}
+
+.bg--yellow {
+  background-color: #F38100;
+  color: #FFFFFF;
+}
+
+.bg--blue {
+  background-color: #324785;
+  color: #FFFFFF;
+}
+
+.bg--white {
+  background-color: #FFFFFF;
+  color: #242A31;
+}
+
+.bg--black {
+  background-color: #34475E;
+  color: #FFFFFF;
+}
+
+.bg--gray {
+  background-color: #F7F7F7;
+  color: #242A31;
+}
+
+.bg--transparent {
+  background: transparent !important;
+  color: #242A31;
+}
+
+.bg--alternative {
+  position: absolute;
+  width: calc(100% + 40%);
+  left: calc(0% - 40%);
+  top: 0%;
+  z-index: -1;
+  height: 100%;
+}
+
+.bg--orange--opacity {
+  background-color: #B9D89A;
+}
+
+.text--orange {
+  color: #B9D89A;
+}
+
+.text--yellow {
+  color: #8FB480;
+}
+
+.text--blue {
+  color: #324785;
+}
+
+.text--white {
+  color: #FFFFFF !important;
+}
+
+.text--black {
+  color: #242A31;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+@media only screen and (max-width: 768px) {
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 768px) {
+  h6.w-50 {
+    width: 35% !important;
+  }
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+.text--big {
+  font-size: 7rem;
+}
+
+.line-height {
+  line-height: 2;
+}
+
+.btn.text-uppercase, h6.text-uppercase {
+  font-family: "Overpass-Light";
+  font-size: 0.8rem;
+  font-weight: lighter !important;
+}
+
+.font-weight-bold {
+  font-family: "Overpass-Bold" !important;
+}
+
+.font-weight-extra-bold {
+  font-family: "Overpass-ExtraBold" !important;
+  line-height: 1;
+}
+
+img {
+  border: 0px !important;
+}
+
+.image--cover, .image--contain, .image--fill {
+  width: 100%;
+  height: 100%;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.image--cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.image--contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.image--fill {
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.btn {
+  font-size: 0.805rem !important;
+  position: relative;
+  border: 0px !important;
+}
+.btn ion-icon {
+  font-size: 1.2rem;
+  margin-bottom: -4px;
+  margin-right: 5px;
+}
+
+.btn.text-uppercase {
+  font-size: 0.7rem !important;
+  position: relative;
+}
+
+.btn.border {
+  border: 1px solid !important;
+}
+
+.pd--1 {
+  padding: 15px 30px 13px 30px;
+}
+
+.pd--2 {
+  padding: 13px 40px 13px 40px;
+}
+
+.rd--1 {
+  border-radius: 1.2rem !important;
+}
+
+.rd--1--top-left {
+  border-top-left-radius: 1.2rem !important;
+}
+
+.rd--1--top-right {
+  border-top-right-radius: 1.4rem !important;
+}
+
+.rd--1--bottom-left {
+  border-bottom-left-radius: 1.2rem !important;
+}
+
+.rd--1--bottom-right {
+  border-bottom-right-radius: 1.2rem !important;
+}
+
+.rd--2 {
+  border-radius: 3rem !important;
+}
+
+.rd--2--top-left {
+  border-top-left-radius: 3rem !important;
+}
+
+.rd--2--top-right {
+  border-top-right-radius: 3rem !important;
+}
+
+.rd--2--bottom-left {
+  border-bottom-left-radius: 3rem !important;
+}
+
+.rd--2--bottom-right {
+  border-bottom-right-radius: 3rem !important;
+}
+
+.border {
+  border: 2.5px solid !important;
+}
+
+.border-top {
+  border-top: 2.5px solid !important;
+}
+
+.border-right {
+  border-right: 2.5px solid !important;
+}
+
+.border-bottom {
+  border-bottom: 2.5px solid !important;
+}
+
+.border-left {
+  border-bottom: 2.5px solid !important;
+}
+
+.shadow-- {
+  box-shadow: 0px 6px 17px -7px rgba(0, 0, 0, 0.3);
+}
+
+.hover--bg--white:hover {
+  background-color: #FFFFFF !important;
+  transition: 0.2s;
+}
+
+@media only screen and (max-width: 768px) {
+  .w-75, .w-50 {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .pr-5 {
+    padding-right: 1.3rem !important;
+  }
+}
+
+.vh-100 {
+  height: 100vh !important;
+}
