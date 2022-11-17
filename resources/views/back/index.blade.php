@@ -2,7 +2,7 @@
 
 @section('content')
 
-{{-- @include('back.layouts.title') --}}
+{{-- @include('back.layouts.title')
      
     <div class="content-wrapper-header">
      <div class="content-wrapper-context">
@@ -203,7 +203,11 @@
      </div>
 
 
+--}}
 
+     <div class="row">
+        <h2>Hola <strong>{{ Auth::user()->name }}</strong>, buenos días</h2>
+     </div>
 @endsection
 
 @push('scripts')

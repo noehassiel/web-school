@@ -29,28 +29,27 @@
     <meta name="author" content="Werken">
 
     <!-- Favicon -->
-    <title>Werkn Commerce - Vista Principal</title>
+    <title>nh - Vista Principal</title>
 
     <!-- vendor css -->
-    <link href="{{ asset('lib/@fortawesome/fontawesome-free/css/all.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('lib/ionicons/css/ionicons.min.css') }}" rel="stylesheet">
     <link href="{{ asset('lib/jqvmap/jqvmap.min.css') }}" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
 
-    <!-- DashForge CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/css/dashforge.css') }}">
-    @if(Auth::user()->color_mode == true)
-    <link rel="stylesheet" href="{{ asset('assets/css/skin.dark.css') }}">
-    @endif
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('assets/css/glass.css') }}">
+    @if(Auth::user()->color_mode == true)
+    <link rel="stylesheet" href="{{ asset('assets/css/glass_light.css') }}">
+    @endif
 
 
     @stack('stylesheets')
 </head>
-<body>
+@if(Auth::user()->color_mode == true)
+    <body class="light-mode">
+@else
+    <body>
+@endif
     <div class="video-bg">
         <video width="320" height="240" autoplay loop muted>
         <source src="https://assets.codepen.io/3364143/7btrrd.mp4" type="video/mp4">
@@ -169,13 +168,5 @@
 
     </script>
     @stack('scripts')
-
-    <script src="{{ asset('assets/js/sct.min.js') }}"></script>
-
-    <script>
-        const toolbarColor = new SBToolbar({
-            color: "blue"
-        });
-    </script>
 </body>
 </html>

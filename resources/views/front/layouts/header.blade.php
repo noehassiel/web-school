@@ -68,42 +68,9 @@
 
                     @guest
                     <li class="list-inline-item"><a href="{{ route('login') }}" class="btn btn-link px-1"><ion-icon name="person"></ion-icon></a></li>
-                    <li class="list-inline-item">
-                        <a href="{{ route('login') }}" class="btn btn-link px-1">
-                            <ion-icon name="heart"></ion-icon>
-                            <span class="badge bg-info">0</span>
-                        </a>
-                    </li>
                     @else
                     <li class="list-inline-item"><a href="{{ route('profile') }}" class="btn btn-link px-1"><ion-icon name="person"></ion-icon></a></li>
-                    <li class="list-inline-item">
-                        <a href="{{ route('wishlist') }}" class="btn btn-link px-1">
-                            <ion-icon name="heart"></ion-icon>
-                            <span class="badge bg-info">{{ Auth::user()->wishlists->count() ?? '0'}}</span>
-                        </a>
-                    </li>
                     @endguest
-
-                    @if(request()->is('checkout'))
-
-                    @else
-                    <div class="dropdown" style="display: inline-flex;">
-                        <a class="btn btn-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                            <ion-icon name="bag"></ion-icon>
-                            <span class="badge bg-danger">{{ Session::has('cart') ? Session::get('cart')->totalQty : '0' }}</span>
-                        </a>
-
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink" style="min-width: 20rem; padding: 10px;">
-                            @if(Session::has('cart'))
-                                @include('front.layouts.utilities._cart_item')
-                            @else
-                                <p class="mb-0 d-flex align-items-center">
-                                    No hay productos en tu carrito.
-                                </p>
-                            @endif
-                        </ul>
-                    </div>
-                    @endif
                 </ul>       
             </div>
         </div>

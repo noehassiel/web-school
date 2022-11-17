@@ -7,7 +7,7 @@
       <a class="menu-link notify" href="#">Market</a>
     </div>
     <div class="search-bar">
-      <input type="text" placeholder="Search">
+      <input type="text" placeholder="Buscar estudiante o empleado">
     </div>
     <div class="header-profile">
       <div class="notification">
