@@ -15,6 +15,9 @@ use App\Models\Category;
 use App\Models\Order;
 use App\Models\User;
 
+use Notion;
+
+
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller

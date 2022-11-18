@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '9f61e67017fe4207e16b07ced78677a679ad9d24',
+        'reference' => '8acf1de5f22c22032c4bb21d5df005f6f18f4479',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -183,6 +183,15 @@
             'aliases' => array(),
             'reference' => 'a63e5e8f26ebbebf8ed3c5c691637325512eb0dc',
             'dev_requirement' => true,
+        ),
+        'fiveam-code/laravel-notion-api' => array(
+            'pretty_version' => 'v0.8.0',
+            'version' => '0.8.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../fiveam-code/laravel-notion-api',
+            'aliases' => array(),
+            'reference' => '4f75db65b22cb600ffdfba14eab49b1ef36bee54',
+            'dev_requirement' => false,
         ),
         'fruitcake/laravel-cors' => array(
             'pretty_version' => 'v1.0.6',
@@ -483,7 +492,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '9f61e67017fe4207e16b07ced78677a679ad9d24',
+            'reference' => '8acf1de5f22c22032c4bb21d5df005f6f18f4479',
             'dev_requirement' => false,
         ),
         'laravel/serializable-closure' => array(

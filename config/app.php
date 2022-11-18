@@ -169,6 +169,7 @@ return [
         Spatie\Permission\PermissionServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        FiveamCode\LaravelNotionApi\LaravelNotionApiServiceProvider::class,
 
         /*
          * Application Service Providers...
