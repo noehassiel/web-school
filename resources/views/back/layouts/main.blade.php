@@ -113,6 +113,8 @@
     feather.replace()
 </script>
 
+<script src="https://creattie.com/js/embed.js?id=1757830263a8f5e9b0ec" defer></script>
+
 <script src="{{ asset('assets/js/back.js') }}"></script>
 
 <script>
